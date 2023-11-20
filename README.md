@@ -2,6 +2,8 @@
 
 This is a demo application, and introductory tutorial for StereoKit aimed at introducing people to the basics of how to draw and interact with Mixed Reality content! It just so happens that "inking" is a relatively straightforward thing to code, and is pretty fun at the same time.
 
+At the base, it is a direct copy of the [StereoKit Paint Tutorial](https://github.com/StereoKit/StereoKit-PaintTutorial) but then based off of the `sk-multi` template. Because of reasons I wasn't able to fork it.
+
 You'll find out how to create a core application loop, radial hand menus, easy window menus with automatic layout, object-based menus with more explicit layouts, and file pickers. You'll also see how easy it is to draw models, lines, and interact directly with your fingers!
 
 ![](Docs/StereoKitInk.jpg)
@@ -13,7 +15,9 @@ While I could have gone wild on adding features, this project is intended as a r
 This project uses:
 - [StereoKit](https://stereokit.net/Pages/Guides/Getting-Started.html)
 
-This project uses [StereoKit](https://stereokit.net/) to render and drive this as a Mixed Reality application, which allows us to run on HoloLens 2 and VR headsets! That's all that's in here besides the tutorial code :)
+This project uses [StereoKit](https://stereokit.net/) to render and drive this as a Mixed Reality application, which allows us to run on Quest! That's all that's in here besides the tutorial code :)
+
+It has been converted to run with the `sk-multi` template as a start, and the code is copied over from the original repo. 
 
 ## Project Layout
 
