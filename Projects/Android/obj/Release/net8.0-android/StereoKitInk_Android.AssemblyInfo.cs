@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StereoKitInk_Android")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1+c76397bd3d1d9c5dcebb6d8d909a265cbe2b6d7f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1+9ad5dc735333ec28b35e8b26dfd6f31632ab53d5")]
 [assembly: System.Reflection.AssemblyProductAttribute("StereoKitInk_Android")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StereoKitInk_Android")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
