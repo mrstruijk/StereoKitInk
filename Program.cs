@@ -3,12 +3,12 @@ using StereoKit;
 using StereoKit.Framework;
 
 
-internal class Program
+internal static class Program
 {
-    private static Painting activePainting = new();
-    private static PaletteMenu paletteMenu;
-    private static Pose menuPose = new(0.4f, 0, -0.4f, Quat.LookDir(-1, 0, 1));
-    private static Sprite appLogo;
+    private static Painting _activePainting = new();
+    private static PaletteMenu _paletteMenu;
+    private static Pose _menuPose = new(0.4f, 0, -0.4f, Quat.LookDir(-1, 0, 1));
+    private static Sprite _appLogo;
 
 
     private static void Main(string[] args)
@@ -41,17 +41,17 @@ internal class Program
         // forget objects or systems that need to update each frame.
         SK.AddStepper(new HandMenuRadial(
             new HandRadialLayer("Root", -90,
-                new HandMenuItem("Undo", null, () => activePainting?.Undo()),
-                new HandMenuItem("Redo", null, () => activePainting?.Redo()))));
+                new HandMenuItem("Undo", null, () => _activePainting?.Undo()),
+                new HandMenuItem("Redo", null, () => _activePainting?.Redo()))));
 
         // Initialize the palette menu, see PaletteMenu.cs! This class
         // manages the palette UI object for manipulating our brush stroke
         // size and color.
-        paletteMenu = new PaletteMenu();
+        _paletteMenu = new PaletteMenu();
 
         // Load in the app logo as a sprite! We'll draw this at the top of
         // the application menu later in this file.
-        appLogo = Sprite.FromFile("StereoKitInkLight.png");
+        _appLogo = Sprite.FromFile("StereoKitInkLight.png");
 
         // Step the application each frame, until StereoKit is told to exit!
         // The callback code here is called every frame after input and
@@ -61,10 +61,10 @@ internal class Program
                    // Send input information to the painting, it will handle this
                    // info to create brush strokes. This will also draw the painting
                    // too!
-                   activePainting.Step(Handed.Right, paletteMenu.PaintColor, paletteMenu.PaintSize);
+                   _activePainting.Step(Handed.Right, _paletteMenu.PaintColor, _paletteMenu.PaintSize);
 
                    // Step our palette UI!
-                   paletteMenu.Step();
+                   _paletteMenu.Step();
 
                    // Step our application's menu! This includes Save/Load Clear and
                    // Quit commands.
@@ -84,26 +84,26 @@ internal class Program
         // Begin the application's menu window, we'll draw this without a
         // head bar (Body only) since we have a nice application image we can
         // add instead!
-        UI.WindowBegin("Menu", ref menuPose, UIWin.Body);
+        UI.WindowBegin("Menu", ref _menuPose, UIWin.Body);
 
         // Just draw the application logo across the top of the Menu window!
         // Vec2.Zero here tells StereoKit to auto-size both axes, so this
         // will automatically expand to the width of the window.
-        UI.Image(appLogo, V.XY(UI.LayoutRemaining.x, 0));
+        UI.Image(_appLogo, V.XY(UI.LayoutRemaining.x, 0));
 
         // Add undo and redo to the main menu, these are both available on
         // the radial menu, but these are easier to discover, and it never
         // hurts to have multiple options!
         if (UI.Button("Undo"))
         {
-            activePainting?.Undo();
+            _activePainting?.Undo();
         }
 
         UI.SameLine();
 
         if (UI.Button("Redo"))
         {
-            activePainting?.Redo();
+            _activePainting?.Redo();
         }
 
         // When the user presses the save button, lets show a save file
@@ -131,7 +131,7 @@ internal class Program
         // Clear is easy! Just create a new Painting object!
         if (UI.Button("Clear"))
         {
-            activePainting = new Painting();
+            _activePainting = new Painting();
         }
 
         // And if they want to quit? Just tell StereoKit! This will let
@@ -151,12 +151,12 @@ internal class Program
 
     private static void LoadPainting(string file)
     {
-        activePainting = Painting.FromFile(Platform.ReadFileText(file) ?? "");
+        _activePainting = Painting.FromFile(Platform.ReadFileText(file) ?? "");
     }
 
 
     private static void SavePainting(string file)
     {
-        Platform.WriteFile(file, activePainting.ToFileData());
+        Platform.WriteFile(file, _activePainting.ToFileData());
     }
 }
