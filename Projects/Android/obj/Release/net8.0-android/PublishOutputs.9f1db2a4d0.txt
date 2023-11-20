@@ -1,0 +1,4 @@
+/Users/mrstruijk/Current StereoKit Projects/StereoKitInk/Projects/Android/bin/Release/net8.0-android/publish/com.companyname.StereoKitInk-Signed.aab
+/Users/mrstruijk/Current StereoKit Projects/StereoKitInk/Projects/Android/bin/Release/net8.0-android/publish/com.companyname.StereoKitInk.aab
+/Users/mrstruijk/Current StereoKit Projects/StereoKitInk/Projects/Android/bin/Release/net8.0-android/publish/com.companyname.StereoKitInk-Signed.apk
+/Users/mrstruijk/Current StereoKit Projects/StereoKitInk/Projects/Android/bin/Release/net8.0-android/publish/_Microsoft.Android.Resource.Designer.dll

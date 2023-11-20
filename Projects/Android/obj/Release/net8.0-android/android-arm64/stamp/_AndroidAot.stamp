@@ -1,0 +1,15 @@
+obj/Release/net8.0-android/android-arm64/aot/_Microsoft.Android.Resource.Designer.dll.so
+obj/Release/net8.0-android/android-arm64/aot/StereoKitInk_Android.dll.so
+obj/Release/net8.0-android/android-arm64/aot/StereoKit.dll.so
+obj/Release/net8.0-android/android-arm64/aot/System.Collections.dll.so
+obj/Release/net8.0-android/android-arm64/aot/System.Console.dll.so
+obj/Release/net8.0-android/android-arm64/aot/System.Linq.dll.so
+obj/Release/net8.0-android/android-arm64/aot/System.Numerics.Vectors.dll.so
+obj/Release/net8.0-android/android-arm64/aot/System.Runtime.InteropServices.dll.so
+obj/Release/net8.0-android/android-arm64/aot/System.Runtime.dll.so
+obj/Release/net8.0-android/android-arm64/aot/System.Threading.Thread.dll.so
+obj/Release/net8.0-android/android-arm64/aot/netstandard.dll.so
+obj/Release/net8.0-android/android-arm64/aot/Java.Interop.dll.so
+obj/Release/net8.0-android/android-arm64/aot/Mono.Android.Runtime.dll.so
+obj/Release/net8.0-android/android-arm64/aot/Mono.Android.dll.so
+obj/Release/net8.0-android/android-arm64/aot/System.Private.CoreLib.dll.so

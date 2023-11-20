@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "AxZK/9Ktti2brPzsOhF1IC54LvmE43mPSR/J8byub1NkNb35qKCgC4jbGN5NHUCLubPsVdqRXHzKU58mBI/zLQ==",
+  "success": true,
+  "projectFilePath": "/Users/mrstruijk/Current StereoKit Projects/StereoKitInk/Projects/Android/StereoKitInk_Android.csproj",
+  "expectedPackageFiles": [
+    "/Users/mrstruijk/.nuget/packages/microsoft.net.illink.tasks/8.0.0/microsoft.net.illink.tasks.8.0.0.nupkg.sha512",
+    "/Users/mrstruijk/.nuget/packages/stereokit/0.3.8/stereokit.0.3.8.nupkg.sha512",
+    "/Users/mrstruijk/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

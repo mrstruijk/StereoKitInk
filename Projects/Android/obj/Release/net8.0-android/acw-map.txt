@@ -1,0 +1,3 @@
+StereoKitInk.MainActivity, StereoKitInk_Android;crc64729e8e3dcb3f2cdf.MainActivity
+StereoKitInk.MainActivity;crc64729e8e3dcb3f2cdf.MainActivity
+stereokitink.MainActivity;crc64729e8e3dcb3f2cdf.MainActivity
