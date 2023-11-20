@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StereoKitInk")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c76397bd3d1d9c5dcebb6d8d909a265cbe2b6d7f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+977051942cd20d752b089c35a8b54e82c401062e")]
 [assembly: System.Reflection.AssemblyProductAttribute("StereoKitInk")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StereoKitInk")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

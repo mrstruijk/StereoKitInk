@@ -28,3 +28,6 @@
 /Users/mrstruijk/Current StereoKit Projects/StereoKitInk/obj/Release/net8.0/StereoKitInk.pdb
 /Users/mrstruijk/Current StereoKit Projects/StereoKitInk/obj/Release/net8.0/StereoKitInk.genruntimeconfig.cache
 /Users/mrstruijk/Current StereoKit Projects/StereoKitInk/obj/Release/net8.0/ref/StereoKitInk.dll
+/Users/mrstruijk/Current StereoKit Projects/StereoKitInk/bin/Release/net8.0/Assets/InkBottle.glb
+/Users/mrstruijk/Current StereoKit Projects/StereoKitInk/bin/Release/net8.0/Assets/InkSplat.glb
+/Users/mrstruijk/Current StereoKit Projects/StereoKitInk/bin/Release/net8.0/Assets/StereoKitInkLight.png

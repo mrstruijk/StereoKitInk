@@ -3,7 +3,7 @@
 
 internal class PaletteMenu
 {
-    // These models are both used for the UI! One is a bottle that's used for
+    // These models are both used for the UI. One is a bottle that's used for
     // decoration and context, and will display the active color, and the
     // other is a "splash of ink" that we'll turn into a pressable button,
     // and allow users to pick colors with it.
@@ -18,7 +18,7 @@ internal class PaletteMenu
     private float _value = 1;
 
     // These properties are public, so back in Program.cs, we can get access
-    // to these values!
+    // to these values.
     public Color PaintColor { get; private set; } = Color.White;
 
     public float PaintSize
@@ -30,10 +30,10 @@ internal class PaletteMenu
 
     public void Step()
     {
-        // We'll use a standard window to hold all of our ink brush settings!
+        // We'll use a standard window to hold all of our ink brush settings.
         UI.WindowBegin("Ink", ref _pose);
 
-        // Display an ink bottle to highlight the purpose of this area! The
+        // Display an ink bottle to highlight the purpose of this area. The
         // size provided here will auto-fill on the x-axis, which will center
         // the Model, and we'll make it two lines tall.
         UI.Model(_model, V.XY(0, UI.LineHeight * 2));
@@ -55,7 +55,7 @@ internal class PaletteMenu
 
         UI.Space(UI.LineHeight * 0.5f);
 
-        // Swatches are never enough by themselves! So here's some sliders to
+        // Swatches are never enough by themselves. So here's some sliders to
         // let the user HSV their color manually. We start with a fixed size
         // label, and on the same line add a fixed size slider. Fixing the
         // sizes here helps them to line up in columns.
@@ -85,11 +85,11 @@ internal class PaletteMenu
 
         UI.HSeparator();
 
-        // Now for brush sizes! We'll have some size swatches first, these
+        // Now for brush sizes. We'll have some size swatches first, these
         // are similar to the color swatches, except they have some control
         // over how large the swatch looks.
 
-        // Reserve some empty space first, so content lines up in columns!
+        // Reserve some empty space first, so content lines up in columns.
         UI.LayoutReserve(V.XY(8 * U.cm, 0));
 
         UI.SameLine();
@@ -132,24 +132,24 @@ internal class PaletteMenu
         linePreview.dimensions.z = U.cm;
         Mesh.Cube.Draw(Material.Unlit, Matrix.TS(linePreview.center, linePreview.dimensions), PaintColor);
 
-        // And end the window!
+        // And end the window.
         UI.WindowEnd();
     }
 
 
     private void SwatchColor(string id, float hue, float saturation, float value)
     {
-        // Reserve a spot for this swatch!
+        // Reserve a spot for this swatch.
         var bounds = UI.LayoutReserve(_swatchModel.Bounds.dimensions.XY);
         bounds.dimensions.z = U.cm * 4;
 
-        // Draw the swatch model using the color it represents! We'll also
+        // Draw the swatch model using the color it represents. We'll also
         // add some pseudo-random rotation to prevent it from looking too
         // repetitious.
         _swatchModel.Draw(Matrix.TR(bounds.center, Quat.FromAngles(0, 0, bounds.center.x * 70000 + bounds.center.y * 30000)), Color.HSV(hue, saturation, value));
 
         // If the users interacts with the volume the swatch model is in,
-        // then we'll set the active color right here, and play some sfx!
+        // then we'll set the active color right here, and play some sfx.
         var state = UI.VolumeAt(id, bounds, UIConfirm.Push);
 
         if (state.IsJustActive())
@@ -167,11 +167,11 @@ internal class PaletteMenu
 
     private bool SwatchSize(string id, float size)
     {
-        // Reserve a spot for this swatch!
+        // Reserve a spot for this swatch.
         var bounds = UI.LayoutReserve(Vec2.One * 4 * U.cm);
         bounds.dimensions.z = U.cm * 4;
 
-        // Draw a swatch model using the size it represents! We'll also
+        // Draw a swatch model using the size it represents. We'll also
         // add some pseudo-random rotation to prevent it from looking too
         // repetitious.
         _swatchModel.Draw(Matrix.TRS(bounds.center, Quat.FromAngles(0, 0, bounds.center.x * 70000 + bounds.center.y * 30000), size * (1 / .04f)), Color.HSV(_hue, _saturation, _value));
@@ -206,7 +206,7 @@ internal class PaletteMenu
         // Update the ink bottle's material with the current color.
         _model.RootNode.Material[MatParamName.ColorTint] = PaintColor;
 
-        // And we'll also colorize the user's hand mesh too!
+        // And we'll also colorize the user's hand mesh too.
         Default.MaterialHand[MatParamName.ColorTint] = PaintColor;
         // You could also set individual hands to a custom material using
         // Input.HandMaterial

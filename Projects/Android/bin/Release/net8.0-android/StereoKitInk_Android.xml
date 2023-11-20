@@ -4,5 +4,23 @@
         <name>StereoKitInk_Android</name>
     </assembly>
     <members>
+        <member name="M:HelperFunctions.IsRunningOnQuest">
+            <summary>
+                Returns true if the operating system is Meta Quest
+                Checks for "Quest" or "Oculus" or "Meta" in the device name
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MetaPassthroughToggler">
+            <summary>
+                This combines the FB Passthrough with a UI window to toggle it on and off
+                It needs to be called before StereoKit is initialized
+            </summary>
+        </member>
+        <member name="M:MetaPassthroughToggler.DrawPassthroughTogglerUI">
+            <summary>
+                Call this on every frame you want to see it
+            </summary>
+        </member>
     </members>
 </doc>
